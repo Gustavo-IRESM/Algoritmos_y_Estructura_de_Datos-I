@@ -30,3 +30,6 @@ animal = Animal("animal1","felino","1/1/2010","Pedro")
 animal_marino = AnimalesAcuaticos("animal2","felino","9/1/2010","Pedro")
 animal_jaula = AnimalesEnjaulados("animal3","felino","1/1/2010","Pedro")
 animal_suelto = AnimalesSueltos("animal4","felino","1/1/2010","Pedro")
+
+
+
