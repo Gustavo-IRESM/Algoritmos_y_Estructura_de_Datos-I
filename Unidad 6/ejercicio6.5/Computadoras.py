@@ -5,6 +5,7 @@ Crear una clase padre Computadoras:
     1.  Presentarse (id_modelo,listaPerifericos,SO)
     2.  Indicar tipo de Computadora (Clases heredadas)
     3.  Metodos que luego modificarán las clases hijas. agregar_perifericos,CambiarSO
+
 Crear 2 clases que hereden de la clase padre Computadoras, con un atributo en particular para cada una
 1.   Escritorio
 2.   Notebbok

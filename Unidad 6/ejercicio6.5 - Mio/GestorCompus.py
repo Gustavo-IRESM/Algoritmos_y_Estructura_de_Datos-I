@@ -1,10 +1,3 @@
-'''
-Crear clase GestorComputadora que cuente con las siguientes funciones para un menu
-    - 1. Crear Computadora, indicando tipo y guardar en una lista. Verificando marca y SO de una lista
-    - 2. Listar Computadoras (presentandolos), indicando tipo.
-    - 3. Cambiar SO de una Computadora, verificando una lista de SO disponibles
-    - 4. Listar perifericos
-'''
 
 import Compus as cp
 import Auxiliar as aux
@@ -49,7 +42,7 @@ class GestorDeCompus:
                 for id in range (len(lista_marca)):
                     print(f"{id + 1} - {lista_marca[id]}")
 
-                id_marca = aux.ingresar_numero_entero("Ingrese la marca: ",0,len(lista_marca)) - 1
+                id_marca = aux.ingresar_numero_entero("Ingrese la marca: ",1,len(lista_marca))
                 break
         #else:
             #print("Año no válido.")
@@ -83,7 +76,8 @@ class GestorDeCompus:
                 nueva_compu = cp.Escritorio(id_compu,nuevos_perifericos,lista_so[id_so],lista_marca[id_marca])
                 lista_compus.append(nueva_compu)
         elif(tipo_compu == 3):
-            nueva_compu = cp.Notebook(id_compu,nuevos_perifericos,lista_so[id_so],lista_marca[id_marca])
+            #nueva_compu = cp.Notebook(id_compu,nuevos_perifericos,lista_so[id_so],lista_marca[id_marca])
+            print(f"{id_compu},{nuevos_perifericos},{lista_so[id_so]},{lista_marca[id_marca]}")
             lista_compus.append(nueva_compu)
         else:
             print("Tipo de compu NO válido.")
@@ -127,7 +121,7 @@ class GestorDeCompus:
         for id in range (len(lista_so)):
             print(f"{id + 1} - {lista_so[id]}")
 
-        id_so = aux.ingresar_numero_entero("Seleccione el SO: ",0,len(lista_so)) - 1
+        id_so = aux.ingresar_numero_entero("Seleccione el SO: ",1,len(lista_so))
         return id_so
 
 
@@ -157,19 +151,3 @@ class GestorDeCompus:
             return False
 
 
-
-
-
-
-
-'''
-
-
-
-
-for i in lista:
-    i.presentarse()
-    i.tipo_compu()
-
-
-'''

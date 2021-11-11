@@ -1,0 +1,5 @@
+Hola soy un archivo para leer.
+esta es la segunda linea.
+esta es la tercer linea.
+esta es la 4° linea.
+esta es la 5° linea.

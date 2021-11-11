@@ -1,15 +1,3 @@
-'''
-Crear una clase padre Computadoras:
-    + Constructor debe incluir los atributos (id,listaPerifericos,SO)
-    + Crear metodos para esta clase de:
-        + 1. Presentarse (id,listaPerifericos,SO)
-        + 2. Indicar tipo de Computadora (Clases heredadas)
-        + 3. Metodos que luego modificarán las clases hijas. agregar_perifericos,CambiarSO
-
-Crear 2 clases que hereden de la clase padre Computadoras, con un atributo en particular para cada una
-    + 1. Escritorio
-    + 2. Notebbok
-'''
 
 class Compus:
     def __init__(self,id,listaPerifericos,SO):
@@ -18,12 +6,12 @@ class Compus:
         self.SO = SO
 
     def presentarse(self):
-        print(f"""Computadora con id {self.id} incluye los periféricos {self.listaPerifericos} y con Sistema Operativo {self.SO}""")
+        print(f"""Computadora con id {self.id + 1} incluye los periféricos {self.listaPerifericos} y con Sistema Operativo {self.SO}""")
     
     def tipo_compu(self):
         print ("Computadora tipo:", type(self).__name__)
 
-    def agregar_periferico(self):
+    def agregar_periferico(self,nuevo_periferico):
         print (f"Los periféricos que tiene la Computadora Genérica son {self.listaPerifericos}")
         self.listaPerifericos.append(nuevo_periferico)
 
