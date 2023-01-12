@@ -2,7 +2,7 @@
 ###**Ejercicio 6.3**
 Crear una clase de Peliculas:
 +   Cuyo constructutor debe inicializar los atributos nombre, año, genero, nacionalidad, puntuacion
-*   Se deben crear 4 metodos en la clase:
++   Se deben crear 4 metodos en la clase:
     + 1.  Presentar la pelicula: La pelicula {nombre} de {genero} del {año} obtuvo una puntuacion de {puntuacion}  
         y fue filmada en {nacionalidad}
     + 2. Retornar si el año de la pelicula es mayor o igual o menor al pasado por parametro

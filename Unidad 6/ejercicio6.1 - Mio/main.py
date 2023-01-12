@@ -1,22 +1,22 @@
 '''
 Crear la clase Vehículo que tiene los siguientes atributos:
-    - marca
-    - tipo de vehículo (moto, auto o camión),
-    - tipo de combustible
-    - velocidad máxima
-    - kilometraje
+    + marca
+    + tipo de vehículo (moto, auto o camión),
+    + tipo de combustible
+    + velocidad máxima
+    + kilometraje
 
 Los métodos que debe implementar son:
-    - Constructor
-    - RealizarMantenimiento:
-        - Para el caso de las motos el mantenimiento debe realizarse a los 20.000 kms
-        * Para el caso de los autos el mantenimiento debe realizarse a los 60.000 kms
-        * Para el caso de los camiones el mantenimiento debe realizarse a los 100.000 kms
+    + Constructor
+    + RealizarMantenimiento:
+        + Para el caso de las motos el mantenimiento debe realizarse a los 20.000 kms
+        + Para el caso de los autos el mantenimiento debe realizarse a los 60.000 kms
+        + Para el caso de los camiones el mantenimiento debe realizarse a los 100.000 kms
 
 Finalmente, se debe hacer un menú con una lista de vehículos que coleccione los 3 tipos de vehículos, con opciones de:
-    - creación de vehículos
-    - mostrar los datos de los vehículos
-    - realizar el mantenimiento de los mismos.
+    + creación de vehículos
+    + mostrar los datos de los vehículos
+    + realizar el mantenimiento de los mismos.
 '''
 
 #--------------------------------------------------

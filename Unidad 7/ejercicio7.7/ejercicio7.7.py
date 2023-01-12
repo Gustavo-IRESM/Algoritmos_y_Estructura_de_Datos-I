@@ -60,7 +60,7 @@ while True:
     opcion = input(
     """
 -----------Menu principal-----------
-Por favor ingrese una opcion:
+Seleccione una opcion:
     1.  Crear un archivo
     2.  Escribir datos
     3.  Borrar los datos del archivo

@@ -2,6 +2,7 @@ import Pelicula as pl
 import auxiliar as aux
 
 lista_peliculas = [] #empieza vacia
+lista_generos = ["Acción","Policial","Thriller","Suspenso","Romántica","Comedia","Documental"]
 
 class GestorDePeliculas:
     def __init__(self):
@@ -10,35 +11,16 @@ class GestorDePeliculas:
 #---------- Cargo el género de la película ----------
     def genero(self):
         while True:
-            opcion = input("""
-Menú género
------------
-    1 - Acción
-    2 - Policial
-    3 - Thriller
-    4 - Suspenso
-    5 - Romántica
-    6 - Comedia
-    7 - Documental
-    Seleccione una opción: """)
-
-            if opcion == "1":
-                return "Acción"
-            elif opcion == "2":
-                return "Policial"
-            elif opcion == "3":
-                return "Thriller"
-            elif opcion == "4":
-                return "Suspenso"
-            elif opcion == "5":
-                return "Romántica"
-            elif opcion == "6":
-                return "Comedia"
-            elif opcion == "7":
-                return "Documental"
+            print("Menú género \n-----------")
+            for i in range (len(lista_generos)):
+                print(f"{i+1} - {lista_generos[i]}")
+            
+            opcion = aux.ingresar_numero_entero("Seleccione un género: ",1,len(lista_generos))
+            return lista_generos[opcion-1]
 
     #---------- Cargo una película ----------
     def crear_peliculas(self):
+        '''
         lista_peliculas.append(pl.Pelicula("Rambo 3",1986,"Acción","USA",9))
         lista_peliculas.append(pl.Pelicula("Duro de matar",1996,"policial","Argentina",10))
         lista_peliculas.append(pl.Pelicula("Viaje a las estrellas",1995,"Thriller","Canadiense",6))
@@ -52,7 +34,7 @@ Menú género
                 print("Esta pelicula ya existe.")
                 return
         
-            año = aux.ingresar_numero_entero("Ingrese el año de la película (debe estar entre 1970-2021): ")
+            año = aux.ingresar_numero_entero("Ingrese el año de la película (debe estar entre 1970-2021): ",1900,2021)
             if (año >= 1970 and año <= 2021):
                 break
             else:
@@ -61,7 +43,7 @@ Menú género
         genero = self.genero()
         nacionalidad = input("Ingrese la nacionalidad: ").capitalize()
         while True:
-            puntuacion = aux.ingresar_numero_entero("Ingrese la puntuación de la película (debe estar entre 1-10): ")
+            puntuacion = aux.ingresar_numero_entero("Ingrese la puntuación de la película (debe estar entre 1-10): ",1,10)
             if (puntuacion >= 1 and puntuacion <= 10):
                 break
             else:
@@ -69,12 +51,13 @@ Menú género
         
         lista_peliculas.append(pl.Pelicula(nombre,año,genero,nacionalidad,puntuacion))
         return
-        '''
+        
 
     #---------- Imprimo la lista de un año ----------
     #def listar_peliculas(self, año=0):
-    def listar_peliculas(self, año):
-        año = aux.ingresar_numero_entero("\nIngrese el año de la película (debe estar entre 1970-2021)\n0 para listar todas las películas: ")
+    #def listar_peliculas(self, año):
+    def listar_peliculas(self):
+        año = aux.ingresar_numero_entero("\nIngrese el año de la película (debe estar entre 1970-2021)\n0 para listar todas las películas: ",0,2021)
         print("\nListado de películas:")
         print("---------------------")
         for peliculas in lista_peliculas:
@@ -143,7 +126,7 @@ Menú género
         while True:
             nombre_pelicula = self.existe_pelicula()
             if(nombre_pelicula):
-                año = aux.ingresar_numero_entero("Ingrese el año estimado en que se filmó la película: ")
+                año = aux.ingresar_numero_entero("Ingrese el año estimado en que se filmó la película: ",1970,2021)
                 nombre_pelicula.mayor_menor_igual(año)
                 break
 
@@ -151,7 +134,7 @@ Menú género
     def modificar_puntuacion(self):
         pelicula = self.mostrar_datos_pelicula()
         
-        nueva_puntuacion = aux.ingresar_numero_entero("Ingrese la nueva puntuación de la película: ")
+        nueva_puntuacion = aux.ingresar_numero_entero("Ingrese la nueva puntuación de la película: ",1,10)
         
         # Podría hacer estp ? Ventajas y desventajas ?
         pelicula.puntuacion = nueva_puntuacion

@@ -37,7 +37,7 @@ def contar_filas():
             if (linea == ""):
                 break
             cont+=1
-        print(f"La cantidad de filas son: {cont}")
+        print(f"\nLa cantidad de filas son: {cont}")
         tabla.close()
     except:
         print("error")

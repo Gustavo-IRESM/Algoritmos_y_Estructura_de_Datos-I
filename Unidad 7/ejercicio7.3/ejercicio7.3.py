@@ -51,7 +51,21 @@ def contar_letras():
     except:
         print("\nNo existe el archivo")
 
+#--------------- ---------------
+def contar_palabras():
+    try:
+        fichero = open(path + "\\archivo.txt","r")
+        palabras = fichero.read()
+
+        lista_palabras = palabras.split()
+        print(f"\n{lista_palabras}")
+        print(f"El archivo tiene {len(lista_palabras)} palabras")
+        fichero.close()
+    except:
+        print("\nNo existe el archivo")
+
+
 #------------------------------
 contar_letras_gustavo()
-
 contar_letras()
+contar_palabras()

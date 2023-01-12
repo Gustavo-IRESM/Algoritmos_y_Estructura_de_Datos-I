@@ -8,8 +8,7 @@ class Peliculas:
 
     #-------------- Mostrar datos de una película --------------
     def presentar_pelicula(self):
-        print(f"""La pelicula {self.nombre}, del año {self.año}, de nacionalidad {self.nacionalidad} 
-        es del genero {self.genero} y tiene una puntuación de {self.puntuacion}""")
+        print(f"""La pelicula {self.nombre}, del año {self.año}, de nacionalidad {self.nacionalidad} es del genero {self.genero} y tiene una puntuación de {self.puntuacion}""")
     
     #-------------- Chequear año de la peliícula --------------
     def chequear_año(self,año):

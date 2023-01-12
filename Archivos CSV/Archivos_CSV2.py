@@ -2,8 +2,9 @@
 
 import csv, operator
 CONST_DELIMITADOR = ';'
-CONST_ARCHIVO_ENTRADA = 'Alumnos.csv'
-CONST_ARCHIVO_SALIDA = 'Matricular.csv'
+#CONST_ARCHIVO_ENTRADA = 'Alumnos.csv'
+CONST_ARCHIVO_ENTRADA = 'D:\Users\Administrador\Documents\Analista\1er año\Algoritmos y Estructura de Datos I\Archivos CSV\Matriculacion\inscriptos_LICENCIATURA_EN_COMUNICACION_SOCIAL_(2015).csv'
+CONST_ARCHIVO_SALIDA = 'D:\Users\Administrador\Documents\Analista\1er año\Algoritmos y Estructura de Datos I\Archivos CSV\Matriculacion\Matricular.csv'
 
 
 with open(CONST_ARCHIVO_ENTRADA) as csvarchivo:
@@ -15,8 +16,8 @@ with open(CONST_ARCHIVO_ENTRADA) as csvarchivo:
                         quoting=csv.QUOTE_NONE)
     
     for reg in entrada:
-        print(reg['Materia'],reg['Año'],reg['Periodo'],reg['Turno'],reg['Division'],reg['Alumno'],reg['Nro de documento'])
-        salida.writerow([reg['Materia'],reg['Año'],reg['Periodo'],reg['Turno'],reg['Division'],reg['Alumno'],reg['Nro de documento']])
+        print(reg['Materia'],reg['Año'],reg['Periodo'],reg['Turno'],reg['Division'],reg['Alumno'],reg['Nro de documento'],reg['Baja'],reg['Fecha Baja'])
+        salida.writerow([reg['Materia'],reg['Año'],reg['Periodo'],reg['Turno'],reg['Division'],reg['Alumno'],reg['Nro de documento'],reg['Baja'],reg['Fecha Baja']])
         #if reg['provincia'] != 'Huelva':
             #salida.writerow([reg['nom'], reg['cons']])  # Escribir registro
 
